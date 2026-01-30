@@ -15,14 +15,10 @@ digital (WCAG).
 
 ## Requisitos
 
-**Opção 1**
 - Node.js 20+
 - npm
 
-**Opção 2**
-- Docker e Docker Compose (opcional)
-
-### Opcao 1: npm (SQLite)
+### npm (SQLite)
 
 **Backend:**
 ```bash
@@ -39,25 +35,6 @@ npm install
 npm run dev           # http://localhost:5173
 ```
 
-### Opcao 2: Docker Compose (PostgreSQL)
-
-
-```bash
-# Na raiz do projeto
-docker-compose up -d
-
-# Frontend: http://localhost:5173
-# Backend:  http://localhost:3001
-# Postgres: localhost:5432
-```
-
-**Comandos uteis:**
-```bash
-docker-compose down          # Para os servicos
-docker-compose down -v       # Para e remove volumes (reset banco)
-docker-compose logs -f       # Ver logs
-docker-compose logs backend  # Logs do backend
-```
 
 # Detalhes do projeto
 
@@ -155,4 +132,4 @@ Conforme Manual de Respostas da Ouvidoria Geral do DF:
 
 **Backend:** Node.js, Express, TypeScript, Prisma, JWT, Multer
 
-**Banco:** SQLite (dev local) / PostgreSQL (Docker)
+**Banco:** SQLite (dev local)

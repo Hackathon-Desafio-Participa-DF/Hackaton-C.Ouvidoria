@@ -16,11 +16,8 @@
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
     "seed": "tsx prisma/seed.ts",
-    "db:sqlite": "cp prisma/schema.sqlite.prisma prisma/schema.prisma && echo 'Usando SQLite'",
-    "db:postgres": "cp prisma/schema.postgres.prisma prisma/schema.prisma && echo 'Usando PostgreSQL'",
     "db:reset": "rm -f prisma/dev.db prisma/dev.db-journal",
-    "setup:local": "npm run db:sqlite && npm run db:reset && npm run prisma:generate && npm run prisma:migrate && npm run seed",
-    "setup:docker": "npm run db:postgres && npm run prisma:generate"
+    "setup": "npm run db:reset && npm run prisma:generate && npm run prisma:migrate && npm run seed"
   },
   "keywords": [
     "ouvidoria",
