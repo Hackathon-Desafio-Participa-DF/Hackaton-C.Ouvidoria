@@ -137,11 +137,16 @@ export default function ConsultaProtocolo() {
               </div>
             </div>
 
-            {manifestacao.descricao && (
+            <div>
+              <p className="text-sm text-gray-500 mb-1">Assunto</p>
+              <p className="font-medium text-gray-900">{manifestacao.assunto}</p>
+            </div>
+
+            {manifestacao.relato && (
               <div>
-                <p className="text-sm text-gray-500 mb-1">Descrição</p>
+                <p className="text-sm text-gray-500 mb-1">Relato</p>
                 <p className="text-gray-900 whitespace-pre-wrap bg-gray-50 p-4 rounded-lg">
-                  {manifestacao.descricao}
+                  {manifestacao.relato}
                 </p>
               </div>
             )}

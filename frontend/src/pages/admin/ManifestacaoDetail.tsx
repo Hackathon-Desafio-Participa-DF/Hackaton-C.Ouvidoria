@@ -193,12 +193,45 @@ export default function ManifestacaoDetail() {
           <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
             <h2 className="text-lg font-semibold text-gray-900 mb-4">Conteúdo</h2>
 
-            {manifestacao.descricao && (
+            <div className="mb-4">
+              <p className="text-sm text-gray-500 mb-1">Assunto</p>
+              <p className="text-gray-900 font-medium">{manifestacao.assunto}</p>
+            </div>
+
+            {manifestacao.relato && (
               <div className="mb-4">
-                <p className="text-sm text-gray-500 mb-1">Descrição</p>
+                <p className="text-sm text-gray-500 mb-1">Relato</p>
                 <p className="text-gray-900 whitespace-pre-wrap bg-gray-50 p-4 rounded-lg">
-                  {manifestacao.descricao}
+                  {manifestacao.relato}
                 </p>
+              </div>
+            )}
+
+            {manifestacao.dataFato && (
+              <div className="mb-4">
+                <p className="text-sm text-gray-500 mb-1">Data do Fato</p>
+                <p className="text-gray-900">{new Date(manifestacao.dataFato).toLocaleDateString('pt-BR')}</p>
+              </div>
+            )}
+
+            {manifestacao.horarioFato && (
+              <div className="mb-4">
+                <p className="text-sm text-gray-500 mb-1">Horário do Fato</p>
+                <p className="text-gray-900">{manifestacao.horarioFato}</p>
+              </div>
+            )}
+
+            {manifestacao.local && (
+              <div className="mb-4">
+                <p className="text-sm text-gray-500 mb-1">Local</p>
+                <p className="text-gray-900">{manifestacao.local}</p>
+              </div>
+            )}
+
+            {manifestacao.pessoasEnvolvidas && (
+              <div className="mb-4">
+                <p className="text-sm text-gray-500 mb-1">Pessoas Envolvidas</p>
+                <p className="text-gray-900">{manifestacao.pessoasEnvolvidas}</p>
               </div>
             )}
 
